@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- JQ下載版 -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 網站上線後用 線上版 -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+    <style>
+        #info{
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+    </style>
+<script>
+    function showTime(){
+        // $('#info').html(Date());
+        var now = new Date(); //new：實體化
+        var nowY = now.getFullYear();
+        var nowM = now.getMonth()+1;
+        //0~11
+        var nowD = now.getDate();
+        var nowW = now.getDay();
+        var nowH, nowI, nowS;
+        nowH= now.getHours();
+        nowI=now.getMinutes();
+        nowS=now.getSeconds();
+        var nowString = nowY+'年'+nowM+'月'+nowD+'日 星期'+ nowW +' '+nowH+':'+nowI+':'+nowS;
+
+        $('#info').html(nowString);
+    }
+
+    $(document).ready(function(){
+        showTime();
+
+        //間隔(定時)執行
+        //setInterval(執行函數,間隔時間(單位：毫秒ms))
+        setInterval(showTime,1000);
+    })
+    // document.getElementById('info').innerHTML=Date();
+    
+</script>
+</head>
+<body>
+    <div id="info">info</div>
+</body>
+</html>
