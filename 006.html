@@ -14,29 +14,41 @@
         }
     </style>
     <script>
+        //Math.random()亂數產生0~.9999999
+        var n1=Math.random();
+        console.log(n1);
+        n1=n1*100;
+        //Math.floor()無條件捨去，取整數
+        n1=Math.floor(n1);
+        console.log(n1);
+
+        //a~b間的隨機整數
+        //Math.floor(Math.random()*(b-a+1))+a
+        //隨機產生1~10的整數
+        var n2=Math.floor(Math.random()*(10-1+1))+1;
+        console.log(n2);
+        
+        var n3=Math.floor(Math.random()*(10-2+1))+2;
+        console.log(n3);
+
         $(document).ready(function(){
             var newsData=['全球50大餐廳排行榜公開','遺世獨立的最高境界！座落於絕美景緻中的孤立建築','顛覆你對都會的刻板印象！全球最美麗的城市','紅橙黃綠藍靛紫！世界上27個色彩斑斕的地方','令人深思的藝術品：街頭壁畫','大自然的絕美奇景！全球21座令人屏息的火山口湖','勇者限定！全球13座讓人嚇破膽的天空步道'];
-            var newsIndex=0;
+            var newsIndex=Math.floor(Math.random()*(newsData.length));
 
             $('#news').html(newsData[newsIndex]);
             
             function nextNews(){
-                //newsIndex=newsIndex+1;
-				//newsIndex+=1;
-				newsIndex++; //++只能+1
-                
-                //當newsIndex>=陣列長度時,newsIndex重新計算
-                if(newsIndex>=newsData.length){
-                    newsIndex=0;
-                }
-                //抓取餘數數值
-                // newsIndex=newsIndex%newsData.length;
+               
+                // newsIndex=Math.floor(Math.random()*(newsData.length-1-0+1))+0
+                newsIndex=Math.floor(Math.random()*(newsData.length))
                 
                 console.log(newsIndex); //檢查過程
                 $('#news').html(newsData[newsIndex]);
             }
             setInterval(nextNews,2000);
         })
+
+
     </script>
 </head>
 <body>
