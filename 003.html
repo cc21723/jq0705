@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-hant-tw">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,8 +29,64 @@
         nowH= now.getHours();
         nowI=now.getMinutes();
         nowS=now.getSeconds();
-        var nowString = nowY+'年'+nowM+'月'+nowD+'日 星期'+ nowW +' '+nowH+':'+nowI+':'+nowS;
+        
+        //alert(nowString); 
+        //會暫停程式影響後面執行
 
+        // console.log(nowString); 
+        //會一直執行後方程式
+        
+        //在秒數小於等於9時成立 前面補0
+            if(now<=9){
+                nowS='0'+nowS;
+            }
+        // 在分鐘小於等於9時成立 前面補0
+            if(now<=9){
+                nowI='0'+nowI;
+            }
+            //星期
+             //條件式等於要兩個= 一個=是把值往左放
+            // if(nowW==1){   
+            //     nowW='一'
+            // }else if(now==2){
+            //     nowW='二'
+            // }else if(now==3){
+            //     nowW='三'
+            // }else if(now==4){
+            //     nowW='四'
+            // }else if(now==5){
+            //     nowW='五'
+            // }else if(now==6){
+            //     nowW='六'
+            // }else{
+            //     nowW='天'
+            // }
+            switch(nowW){
+                case 0:
+                    nowW='日';
+                    break;
+                case 1:
+                    nowW='一';
+                    break;
+                case 2:
+                    nowW='二';
+                    break;
+                case 3:
+                    nowW='三';
+                    break;
+                case 4:
+                    nowW='四';
+                    break;
+                case 5:
+                    nowW='五';
+                    break;
+                case 6:
+                    nowW='六';
+                    break;
+                default:
+                    nowW='';
+            }
+            var nowString = nowY+'年'+nowM+'月'+nowD+'日 星期'+ nowW +' '+nowH+':'+nowI+':'+nowS;
         $('#info').html(nowString);
     }
 

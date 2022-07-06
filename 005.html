@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        #news{
+            background-color: rgb(236, 124, 161);
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            var newsData=['全球50大餐廳排行榜公開','遺世獨立的最高境界！座落於絕美景緻中的孤立建築','顛覆你對都會的刻板印象！全球最美麗的城市','紅橙黃綠藍靛紫！世界上27個色彩斑斕的地方','令人深思的藝術品：街頭壁畫','大自然的絕美奇景！全球21座令人屏息的火山口湖','勇者限定！全球13座讓人嚇破膽的天空步道'];
+            var newsIndex=0;
+
+            $('#news').html(newsData[newsIndex]);
+            
+            function nextNews(){
+                //newsIndex=newsIndex+1;
+				//newsIndex+=1;
+				newsIndex++; //++只能+1
+                
+                //當newsIndex>=陣列長度時,newsIndex重新計算
+                if(newsIndex>=newsData.length){
+                    newsIndex=0;
+                }
+                console.log(newsIndex); //檢查過程
+                $('#news').html(newsData[newsIndex]);
+            }
+            setInterval(nextNews,2000);
+        })
+    </script>
+</head>
+<body>
+    <div id="news">news</div>
+</body>
+</html>

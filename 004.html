@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a1=new Array();
+        var a2=[100,200,300];
+        alert(a2); //100,200,300
+        alert(a2[0]) //100
+        a2.push(888);
+        alert(a2); //100,200,300,888
+        a2.pop(); //刪除最後一個
+        alert(a2); //100,200,300
+        alert(a2.length); //看陣列長度(數量)
+        a2[5]='aaa'; //100,200,300,,,aaa
+        alert(a2.length); //6
+        a2[4]=a2[1]*a2[2];
+        alert(a2); //100,200,300,,60000,aaa
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
