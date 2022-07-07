@@ -19,6 +19,8 @@
             for(var i=0;i<list.length;i++){
                 if(list.eq(i).html()<60){
                     $('ul li').eq(i).css({'color':'red'});
+                }else{
+                    $('ul li').eq(i).css({'color':'blue'});
                 }
             }
         })
