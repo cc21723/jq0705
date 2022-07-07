@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-hant-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){ 
+            // alert($('ul li').eq(0).html());
+            // if($('ul li').eq(0).html()<60){
+            //     $('ul li').eq(0).css({'color':'red'});
+            // }
+            // for(起始值i=0;條件式;值增減){
+		    //     符合條件的執行程序
+            // }
+            var list=$('ul li');
+            for(var i=0;i<list.length;i++){
+                if(list.eq(i).html()<60){
+                    $('ul li').eq(i).css({'color':'red'});
+                }
+            }
+        })
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li>55</li>
+        <li>12</li>
+        <li>17</li>
+        <li>63</li>
+        <li>58</li>
+        <li>92</li>
+        <li>73</li>
+        <li>24</li>
+        <li>11</li>
+        <li>23</li>
+    </ul>
+
+
+
+
+
+   
+</body>
+</html>
