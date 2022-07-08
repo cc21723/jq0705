@@ -60,7 +60,19 @@
 <script src="js/jquery-3.6.0.min.js"></script>
 <script>
 $(function(){
-    
+	var isOpen=false;
+    $('a.open').click(function(){
+
+		if(!isOpen/*反向*/){
+			// $('.main').animate({'left':0},500);
+			//.parent() 往上找父層 .parent().parent()往上找兩層
+			$(this).parent().animate({'left':0},500);
+			isOpen=true;
+		}else{
+			$(this).parent().animate({'left':-200},500);
+			isOpen=false;
+		}
+	})
 });
 </script>
 </head>
