@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>animate02</title>
+<script src="js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+.box {
+	background-color: #366;
+	height: 50px;
+	width: 50px;
+	position:absolute;
+	text-align:center;
+	color:#FFF;
+}
+</style>
+<script>
+	$(function(){
+		$('.box').animate({'left':600,'bottom':300},3000);
+	})
+</script>
+</head>
+
+<body>
+	<div class="box"></div>
+</body>
+</html>

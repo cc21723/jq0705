@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>effect03</title>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+$(function(){
+    $('img').css({'opacity':'0.3'});
+
+
+    //.fadeTo(時間,透明度數值) 指定透明度
+    // $('img').mouseenter(function(){
+    //     $(this).fadeTo(1000,1); 
+    // })
+    // $('img').mouseleave(function(){
+    //     $(this).fadeTo(1000,0.3);
+    // })
+
+
+
+    // 對象.hover(function(){
+    //     ...mouseenter...
+    // },function(){
+    //     ...mouseleave
+    // })
+    $('img').hover(function(){
+        $(this).stop().fadeTo(1000,1);   
+    },function(){
+        $(this).stop().fadeTo(1000,0.3);
+    })
+
+});
+</script>
+</head>
+
+<body>
+<img src="images/img01s.jpg" width="200">
+<img src="images/img02s.jpg" width="200">
+<img src="images/img03s.jpg" width="200">
+</body>
+
+</html>

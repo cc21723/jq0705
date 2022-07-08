@@ -16,11 +16,15 @@ a {
 $(function(){
     $('p.more , a.less').hide(); //p.more：p有帶more的class p .more：p裡面 classname是more的
 	$('a.more').click(function(){
-		$('p.more, a.less').show();
+		//show(時間),hide(時間)
+		//單位ms
+		//沒有設定時間 -->直接顯示/隱藏
+		//有設定時間 -->動態展開/收合
+		$('p.more, a.less').show(500);
 		$(this).hide();
 	})
 	$('a.less').click(function(){
-		$('p.more, a.less').hide();
+		$('p.more, a.less').hide(500);
 		$('a.more').show();
 	})
 })
