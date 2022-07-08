@@ -1,0 +1,155 @@
+header{
+    height: 90px;
+    position: relative;
+    
+}
+#logo{
+    /* margin: 20px 0 0 40px; */
+    /* position: relative; */
+    top: 20px;
+    left: 20px;
+}
+/*後代選擇器*/
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 5px;
+}
+nav ul a{
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+}
+
+#mainNav{
+    position: absolute;
+    right: 0;
+    top: 55px;
+    width: calc(100% - 300px);
+}
+/*子代選擇器*/
+#mainNav>ul{
+    display: flex;
+}
+#mainNav>ul>li{
+    flex: 1;
+}
+#mainNav>ul>li:hover ul{
+    display: block;
+} 
+#mainNav ul li a{
+    display: block;
+    text-align: center;
+}
+#mainNav>ul>li>a{
+    padding-bottom: 3px;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 600;
+    border: 1px solid rgb(255, 0, 81);
+}
+/* #mainNav>ul>li>a:hover{
+    background-image: radial-gradient(at center bottom,rgba(255, 255, 255, 0.637),rgba(255, 255, 255, 0) 65%);
+    
+} */
+#mainNav>ul>li>a::before{
+    /* content:url(../images/mainIcon.png) ; */
+    content:'' ;
+    background-image: url(../images/mainIcon.png);
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    /* overflow: hidden; 用background-image就不需要溢出隱藏 */
+    position: relative;
+    top:3px;
+    left: 18px;
+    /* margin-right: 5px; */
+    transition: .5s;
+    border: 1px solid rgb(0, 0, 255);
+}
+#mainNav>ul>li>a>span::before{
+    /* content:url(../images/mainIcon.png) ; */
+    content:'' ;
+    background-image: url(../images/mainIcon.png);
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    /* overflow: hidden; 用background-image就不需要溢出隱藏 */
+    position: relative;
+    top:2px;
+    right: -16px;
+    /* margin-right: 5px; */
+    /* transition: .5s; */
+    /* border: 1px solid rgb(242, 255, 0); */
+    background-position: 0 -16px;
+    opacity: 0;
+}
+/* #mainNav>ul>li:nth-child(2)>a::before{
+    background-position: -16px 0;
+}
+#mainNav>ul>li:nth-child(3)>a::before{
+    background-position: -32px 0;
+}
+#mainNav>ul>li:nth-child(4)>a::before{
+    background-position: -48px 0;
+}
+#mainNav>ul>li:nth-child(5)>a::before{
+    background-position: -64px 0;
+}
+#mainNav>ul>li:nth-child(6)>a::before{
+    background-position: -80px 0;
+} */
+/* #mainNav>ul>li:nth-child(1)>a::before{
+    background-position: -16px 0;
+    
+} */
+#mainNav>ul>li:nth-child(1)>a:hover::before{
+    background-position:-16px 0;
+    opacity: 0
+    /* transition: 1.5s; */
+    /* background-position: 0 -16px; */
+    /* position: relative;
+    left: 0;*/
+}
+#mainNav>ul>li:nth-child(1)>a>span:hover::before{
+    /* background-position:0 -16px; */
+    display: inline-block;
+    opacity: 100%;
+    /* background-position: 0 -16px; */
+    /* position: relative; */
+    left: 0;
+    transition: 1s;
+    transform: translateX(0) ;
+}
+#mainNav>ul>li:nth-child(2)>a:hover::before{
+    background-position: -16px -16px;
+}
+#mainNav>ul>li:nth-child(3)>a:hover::before{
+    background-position: -32px -16px;
+}
+#mainNav>ul>li:nth-child(4)>a:hover::before{
+    background-position: -48px -16px;
+}
+#mainNav>ul>li:nth-child(5)>a:hover::before{
+    background-position: -64px -16px;
+}
+#mainNav>ul>li:nth-child(6)>a:hover::before{
+    background-position: -80px -16px;
+}
+#mainNav ul ul{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 12px 20px;
+    display: none;
+}
+#mainNav ul ul li a{
+    font-size: 0.8em;
+    padding: 0 5px;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+#mainNav ul ul li{
+    margin-bottom: 8px;
+    padding-bottom: 8px;   
+}
+#mainNav ul ul li:hover{
+    border-bottom: 1px dashed #fff;
+    padding-bottom: 7px;
+}
